@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>压缩页面 - art-template</title>
+        <meta charset="utf-8">
+        <meta name="description" content="art-template">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="压缩页面 - art-template">
+        <meta property="og:description" content="art-template">
+        <!--<meta property="og:image" content="/art-template//images/logo.png">-->
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="压缩页面 - art-template">
+        <meta name="twitter:description" content="art-template">
+        <!--<meta name="twitter:image" content="/art-template//images/logo.png">-->
+
+        <!--<link rel="icon" href="/art-template//images/logo.png" type="image/x-icon">-->
+
+        <!-- <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono' rel='stylesheet' type='text/css'> -->
+
+        <!-- main page styles -->
+        <link rel="stylesheet" href="/art-template/css/page.css">
+
+        <script>window.PAGE_TYPE = "docs"</script>
+    </head>
+    <body class="docs">        <div id="mobile-bar" >
+            <a class="menu-button"></a>
+            <a class="logo" href="/">art-template</a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/art-template/">
+    <!--<img src="/images/logo.png">-->
+    <span>art-template</span>
+  </a>
+  <ul id="nav">
+    <!--<li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+</li>-->
+<li><a href="/art-template/docs/" class="nav-link current">Document</a></li>
+<li><a href="/art-template/webpack/" class="nav-link">Webpack</a></li>
+<li><a href="/art-template/express/" class="nav-link">Express</a></li>
+<li><a href="/art-template/koa/" class="nav-link">Koa</a></li>
+<!--<li class="nav-dropdown-container language">
+  <a class="nav-link">多语言</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="http://aui.github.io/art-template/" class="nav-link" target="_blank">中文</a></li>
+    <li><a href="http://aui.github.io/art-template/#等待你的翻译" class="nav-link" target="_blank">English</a></li>
+  </ul>
+</li>
+-->
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <ul class="main-menu">
+        <!--<li>
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+</li>-->
+<li><a href="/art-template/docs/" class="nav-link current">Document</a></li>
+<li><a href="/art-template/webpack/" class="nav-link">Webpack</a></li>
+<li><a href="/art-template/express/" class="nav-link">Express</a></li>
+<li><a href="/art-template/koa/" class="nav-link">Koa</a></li>
+<!--<li class="nav-dropdown-container language">
+  <a class="nav-link">多语言</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="http://aui.github.io/art-template/" class="nav-link" target="_blank">中文</a></li>
+    <li><a href="http://aui.github.io/art-template/#等待你的翻译" class="nav-link" target="_blank">English</a></li>
+  </ul>
+</li>
+-->
+
+    </ul>
+    <div class="list">
+        <h2>
+            
+            文档
+        </h2>
+        <ul class="menu-root">
+
+            
+                <li>
+                    <a href="/art-template/docs/installation.html" class="sidebar-link">安装</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/index.html" class="sidebar-link">介绍</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/syntax.html" class="sidebar-link">语法</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/debug.html" class="sidebar-link">调试</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/imports.html" class="sidebar-link">模板变量</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/rules.html" class="sidebar-link">解析规则</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/minimize.html" class="sidebar-link current">压缩页面</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/options.html" class="sidebar-link">选项</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/api.html" class="sidebar-link">API</a>
+                </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+<div class="content docs with-sidebar minimize-docs">
+    
+      <h1>压缩页面</h1>
+    
+    <p><code>template.defaults.minimize</code></p>
+<p>art-template 内建的压缩器可以压缩 HTML、JS、CSS，它在编译阶段运行，因此完全不影响渲染速度，并且能够加快网络传输。</p>
+<h2 id="开启"><a href="#开启" class="headerlink" title="开启"></a>开启</h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">template.defaults.minimize = <span class="literal">true</span>;</div></pre></td></tr></table></figure>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>参见：<a href="https://github.com/kangax/html-minifier" target="_blank" rel="external">https://github.com/kangax/html-minifier</a></p>
+<p><strong>默认配置</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">template.defaults.htmlMinifierOptions = &#123;</div><div class="line">    <span class="attr">collapseWhitespace</span>: <span class="literal">true</span>,</div><div class="line">    <span class="attr">minifyCSS</span>: <span class="literal">true</span>,</div><div class="line">    <span class="attr">minifyJS</span>: <span class="literal">true</span>,</div><div class="line">    <span class="comment">// 运行时自动合并：rules.map(rule =&gt; rule.test)</span></div><div class="line">    ignoreCustomFragments: []</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+    
+      <div class="docs-links">
+        
+          <span>← <a href="/art-template/docs/rules.html">解析规则</a></span>
+        
+        
+          <span style="float:right"><a href="/art-template/docs/options.html">选项</a> →</span>
+        
+      </div>
+    
+    <div class="footer">
+      发现错误？想参与编辑？
+      <a href="https://github.com/aui/art-template-docs/blob/master/src/docs/minimize.md" target="_blank">
+        在 Github 上编辑此页！
+      </a>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/art-template//js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/art-template//js/common.js"></script>
+
+        <!-- ga -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', '', '/art-template/');
+          ga('send', 'pageview');
+        </script>
+
+        <!-- search
+        <link href="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/art-template/css/search.css">
+        <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+        <script>
+        [
+          '#search-query-nav',
+          '#search-query-sidebar'
+        ].forEach(function (selector) {
+          if (!document.querySelector(selector)) return
+          // search index defaults to v2
+          var match = window.location.pathname.match(/^\/(v\d+)/)
+          var version = match ? match[1] : 'docs'
+          docsearch({
+            appId: 'BH4D9OD16A',
+            apiKey: '5638280abff9d207417bb03be05f0b25',
+            indexName: 'vuejs_cn2',
+            inputSelector: selector,
+            algoliaOptions: { facetFilters: ["version:" + version] }
+          })
+        })
+        </script> -->
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

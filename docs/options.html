@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>选项 - art-template</title>
+        <meta charset="utf-8">
+        <meta name="description" content="art-template">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="选项 - art-template">
+        <meta property="og:description" content="art-template">
+        <!--<meta property="og:image" content="/art-template//images/logo.png">-->
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="选项 - art-template">
+        <meta name="twitter:description" content="art-template">
+        <!--<meta name="twitter:image" content="/art-template//images/logo.png">-->
+
+        <!--<link rel="icon" href="/art-template//images/logo.png" type="image/x-icon">-->
+
+        <!-- <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono' rel='stylesheet' type='text/css'> -->
+
+        <!-- main page styles -->
+        <link rel="stylesheet" href="/art-template/css/page.css">
+
+        <script>window.PAGE_TYPE = "docs"</script>
+    </head>
+    <body class="docs">        <div id="mobile-bar" >
+            <a class="menu-button"></a>
+            <a class="logo" href="/">art-template</a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/art-template/">
+    <!--<img src="/images/logo.png">-->
+    <span>art-template</span>
+  </a>
+  <ul id="nav">
+    <!--<li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+</li>-->
+<li><a href="/art-template/docs/" class="nav-link current">Document</a></li>
+<li><a href="/art-template/webpack/" class="nav-link">Webpack</a></li>
+<li><a href="/art-template/express/" class="nav-link">Express</a></li>
+<li><a href="/art-template/koa/" class="nav-link">Koa</a></li>
+<!--<li class="nav-dropdown-container language">
+  <a class="nav-link">多语言</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="http://aui.github.io/art-template/" class="nav-link" target="_blank">中文</a></li>
+    <li><a href="http://aui.github.io/art-template/#等待你的翻译" class="nav-link" target="_blank">English</a></li>
+  </ul>
+</li>
+-->
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <ul class="main-menu">
+        <!--<li>
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+</li>-->
+<li><a href="/art-template/docs/" class="nav-link current">Document</a></li>
+<li><a href="/art-template/webpack/" class="nav-link">Webpack</a></li>
+<li><a href="/art-template/express/" class="nav-link">Express</a></li>
+<li><a href="/art-template/koa/" class="nav-link">Koa</a></li>
+<!--<li class="nav-dropdown-container language">
+  <a class="nav-link">多语言</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="http://aui.github.io/art-template/" class="nav-link" target="_blank">中文</a></li>
+    <li><a href="http://aui.github.io/art-template/#等待你的翻译" class="nav-link" target="_blank">English</a></li>
+  </ul>
+</li>
+-->
+
+    </ul>
+    <div class="list">
+        <h2>
+            
+            文档
+        </h2>
+        <ul class="menu-root">
+
+            
+                <li>
+                    <a href="/art-template/docs/installation.html" class="sidebar-link">安装</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/index.html" class="sidebar-link">介绍</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/syntax.html" class="sidebar-link">语法</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/debug.html" class="sidebar-link">调试</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/imports.html" class="sidebar-link">模板变量</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/rules.html" class="sidebar-link">解析规则</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/minimize.html" class="sidebar-link">压缩页面</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/options.html" class="sidebar-link current">选项</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/api.html" class="sidebar-link">API</a>
+                </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+<div class="content docs with-sidebar options-docs">
+    
+      <h1>选项</h1>
+    
+    <p><code>template.defaults</code></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 模板名</span></div><div class="line">filename: <span class="literal">null</span>,</div><div class="line"></div><div class="line"><span class="comment">// 模板语法规则列表</span></div><div class="line">rules: [nativeRule, artRule],</div><div class="line"></div><div class="line"><span class="comment">// 是否开启对模板输出语句自动编码功能。为 false 则关闭编码输出功能</span></div><div class="line"><span class="comment">// escape 可以防范 XSS 攻击</span></div><div class="line"><span class="built_in">escape</span>: <span class="literal">true</span>,</div><div class="line"></div><div class="line"><span class="comment">// 是否开启调试模式。如果为 true: &#123;bail:false, cache:false, minimize:false, compileDebug:true&#125;</span></div><div class="line">debug: detectNode ? process.env.NODE_ENV !== <span class="string">'production'</span> : <span class="literal">false</span>,</div><div class="line"></div><div class="line"><span class="comment">// bail 如果为 true，编译错误与运行时错误都会抛出异常</span></div><div class="line">bail: <span class="literal">false</span>,</div><div class="line"></div><div class="line"><span class="comment">// 是否开启缓存</span></div><div class="line">cache: <span class="literal">true</span>,</div><div class="line"></div><div class="line"><span class="comment">// 是否开启压缩。它会运行 htmlMinifier，将页面 HTML、CSS、CSS 进行压缩输出</span></div><div class="line"><span class="comment">// 如果模板包含没有闭合的 HTML 标签，请不要打开 minimize，否则可能被 htmlMinifier 修复或过滤</span></div><div class="line">minimize: <span class="literal">true</span>,</div><div class="line"></div><div class="line"><span class="comment">// 是否编译调试版。编译为调试版本可以在运行时进行 DEBUG</span></div><div class="line">compileDebug: <span class="literal">false</span>,</div><div class="line"></div><div class="line"><span class="comment">// 模板路径转换器</span></div><div class="line">resolveFilename: resolveFilename,</div><div class="line"></div><div class="line"><span class="comment">// HTML 压缩器。仅在 NodeJS 环境下有效</span></div><div class="line">htmlMinifier: htmlMinifier,</div><div class="line"></div><div class="line"><span class="comment">// HTML 压缩器配置。参见 https://github.com/kangax/html-minifier</span></div><div class="line">htmlMinifierOptions: &#123;</div><div class="line">    <span class="attr">collapseWhitespace</span>: <span class="literal">true</span>,</div><div class="line">    <span class="attr">minifyCSS</span>: <span class="literal">true</span>,</div><div class="line">    <span class="attr">minifyJS</span>: <span class="literal">true</span>,</div><div class="line">    <span class="comment">// 运行时自动合并：rules.map(rule =&gt; rule.test)</span></div><div class="line">    ignoreCustomFragments: []</div><div class="line">&#125;,</div><div class="line"></div><div class="line"><span class="comment">// 错误事件。仅在 bail 为 false 时生效</span></div><div class="line">onerror: onerror,</div><div class="line"></div><div class="line"><span class="comment">// 模板文件加载器</span></div><div class="line">loader: loader,</div><div class="line"></div><div class="line"><span class="comment">// 缓存中心适配器（依赖 filename 字段）</span></div><div class="line">caches: caches,</div><div class="line"></div><div class="line"><span class="comment">// 模板根目录。如果 filename 字段不是本地路径，则在 root 查找模板</span></div><div class="line">root: <span class="string">'/'</span>,</div><div class="line"></div><div class="line"><span class="comment">// 默认后缀名。如果没有后缀名，则会自动添加 extname</span></div><div class="line">extname: <span class="string">'.art'</span>,</div><div class="line"></div><div class="line"><span class="comment">// 忽略的变量。被模板编译器忽略的模板变量列表</span></div><div class="line">ignore: [],</div><div class="line"></div><div class="line"><span class="comment">// 导入的模板变量</span></div><div class="line">imports: runtime</div></pre></td></tr></table></figure>
+    
+      <div class="docs-links">
+        
+          <span>← <a href="/art-template/docs/minimize.html">压缩页面</a></span>
+        
+        
+          <span style="float:right"><a href="/art-template/docs/api.html">API</a> →</span>
+        
+      </div>
+    
+    <div class="footer">
+      发现错误？想参与编辑？
+      <a href="https://github.com/aui/art-template-docs/blob/master/src/docs/options.md" target="_blank">
+        在 Github 上编辑此页！
+      </a>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/art-template//js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/art-template//js/common.js"></script>
+
+        <!-- ga -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', '', '/art-template/');
+          ga('send', 'pageview');
+        </script>
+
+        <!-- search
+        <link href="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/art-template/css/search.css">
+        <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+        <script>
+        [
+          '#search-query-nav',
+          '#search-query-sidebar'
+        ].forEach(function (selector) {
+          if (!document.querySelector(selector)) return
+          // search index defaults to v2
+          var match = window.location.pathname.match(/^\/(v\d+)/)
+          var version = match ? match[1] : 'docs'
+          docsearch({
+            appId: 'BH4D9OD16A',
+            apiKey: '5638280abff9d207417bb03be05f0b25',
+            indexName: 'vuejs_cn2',
+            inputSelector: selector,
+            algoliaOptions: { facetFilters: ["version:" + version] }
+          })
+        })
+        </script> -->
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

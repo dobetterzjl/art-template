@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>art-template</title>
+        <meta charset="utf-8">
+        <meta name="description" content="art-template">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="art-template">
+        <meta property="og:description" content="art-template">
+        <!--<meta property="og:image" content="/art-template//images/logo.png">-->
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="art-template">
+        <meta name="twitter:description" content="art-template">
+        <!--<meta name="twitter:image" content="/art-template//images/logo.png">-->
+
+        <!--<link rel="icon" href="/art-template//images/logo.png" type="image/x-icon">-->
+
+        <!-- <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono' rel='stylesheet' type='text/css'> -->
+
+        <!-- main page styles -->
+        <link rel="stylesheet" href="/art-template/css/page.css">
+
+        <script>window.PAGE_TYPE = "webpack"</script>
+    </head>
+    <body class="docs">        <div id="mobile-bar" >
+            <a class="menu-button"></a>
+            <a class="logo" href="/">art-template</a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/art-template/">
+    <!--<img src="/images/logo.png">-->
+    <span>art-template</span>
+  </a>
+  <ul id="nav">
+    <!--<li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+</li>-->
+<li><a href="/art-template/docs/" class="nav-link">Document</a></li>
+<li><a href="/art-template/webpack/" class="nav-link current">Webpack</a></li>
+<li><a href="/art-template/express/" class="nav-link">Express</a></li>
+<li><a href="/art-template/koa/" class="nav-link">Koa</a></li>
+<!--<li class="nav-dropdown-container language">
+  <a class="nav-link">多语言</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="http://aui.github.io/art-template/" class="nav-link" target="_blank">中文</a></li>
+    <li><a href="http://aui.github.io/art-template/#等待你的翻译" class="nav-link" target="_blank">English</a></li>
+  </ul>
+</li>
+-->
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <ul class="main-menu">
+        <!--<li>
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+</li>-->
+<li><a href="/art-template/docs/" class="nav-link">Document</a></li>
+<li><a href="/art-template/webpack/" class="nav-link current">Webpack</a></li>
+<li><a href="/art-template/express/" class="nav-link">Express</a></li>
+<li><a href="/art-template/koa/" class="nav-link">Koa</a></li>
+<!--<li class="nav-dropdown-container language">
+  <a class="nav-link">多语言</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="http://aui.github.io/art-template/" class="nav-link" target="_blank">中文</a></li>
+    <li><a href="http://aui.github.io/art-template/#等待你的翻译" class="nav-link" target="_blank">English</a></li>
+  </ul>
+</li>
+-->
+
+    </ul>
+    <div class="list">
+        <h2>
+            
+            Webpack
+        </h2>
+        <ul class="menu-root">
+
+            
+                <li>
+                    <a href="/art-template/webpack/index.html" class="sidebar-link current"></a>
+                </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+<div class="content webpack with-sidebar ">
+    
+    <h1 id="art-template-loader"><a href="#art-template-loader" class="headerlink" title="art-template-loader"></a>art-template-loader</h1><p>art-template loader for webpack.</p>
+<h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">npm install art-template</div><div class="line">npm install art-template-loader --save-dev</div></pre></td></tr></table></figure>
+<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><p>By default every local <code>&lt;img src=&quot;image.png&quot;&gt;</code> is required (<code>require(&#39;./image.png&#39;)</code>). You may need to specify loaders for images in your configuration (recommended <code>file-loader</code> or <code>url-loader</code>).</p>
+<p>You can specify which attribute combination should be processed by this loader via the query parameter <code>htmlResourceRules</code>. (Default: <code>htmlResourceRules=[/\bsrc=&quot;([^&quot;]*)&quot;/]</code>)</p>
+<p>To completely disable tag-attribute processing (for instance, if you’re handling image loading on the client side) you can pass in <code>htmlResourceRules=false</code>.</p>
+<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">    <span class="comment">// ...</span></div><div class="line">    <span class="built_in">module</span>: &#123;</div><div class="line">        <span class="attr">rules</span>: [&#123;</div><div class="line">            <span class="attr">test</span>: <span class="regexp">/\.jpg$/</span>,</div><div class="line">            <span class="attr">loader</span>: <span class="string">"file-loader"</span></div><div class="line">        &#125;, &#123;</div><div class="line">            <span class="attr">test</span>: <span class="regexp">/\.png$/</span>,</div><div class="line">            <span class="attr">loader</span>: <span class="string">"url-loader?mimetype=image/png"</span></div><div class="line">        &#125;, &#123;</div><div class="line">            <span class="attr">test</span>: <span class="regexp">/\.art$/</span>,</div><div class="line">            <span class="attr">loader</span>: <span class="string">"art-template-loader"</span>,</div><div class="line">            <span class="attr">options</span>: &#123;</div><div class="line">                <span class="comment">// art-template options (if necessary)</span></div><div class="line">                <span class="comment">// @see https://github.com/aui/art-template</span></div><div class="line">            &#125;</div><div class="line">        &#125;]</div><div class="line">    &#125;,</div><div class="line">    <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">include</span>('<span class="attr">.</span>/<span class="attr">header.art</span>') %&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">user</span>) &#123; %&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h2</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">user.name</span> %&gt;</span><span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./octocat.png"</span> <span class="attr">alt</span>=<span class="string">"octocat"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">include</span>('<span class="attr">.</span>/<span class="attr">footer.art</span>') %&gt;</span></div></pre></td></tr></table></figure>
+<p><a href="https://github.com/aui/art-template-loader/tree/master/example" target="_blank" rel="external">More</a></p>
+<h2 id="‘Root-relative’-URLs"><a href="#‘Root-relative’-URLs" class="headerlink" title="‘Root-relative’ URLs"></a>‘Root-relative’ URLs</h2><p>For urls that start with a <code>/</code>, the default behavior is to not translate them.<br>If a <code>htmlResourceRoot</code> query parameter is set, however, it will be prepended to the url<br>and then translated.</p>
+<p>With the same configuration as above:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- file.art --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"/image.jpg"</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="built_in">require</span>(<span class="string">"html-loader!./file.art"</span>);</div><div class="line"></div><div class="line"><span class="comment">// =&gt; '&lt;img  src="/image.jpg"&gt;'</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="built_in">require</span>(<span class="string">"html-loader?htmlResourceRoot=.!./file.art"</span>);</div><div class="line"></div><div class="line"><span class="comment">// =&gt; '&lt;img  src="http://cdn.example.com/49eba9f/a992ca.jpg"&gt;'</span></div></pre></td></tr></table></figure>
+<h2 id="Filter"><a href="#Filter" class="headerlink" title="Filter"></a>Filter</h2><p>Add filter:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> runtime = <span class="built_in">require</span>(<span class="string">'art-template/lib/runtime'</span>);</div><div class="line">runtime.dateFormat = <span class="function"><span class="keyword">function</span>(<span class="params">date, format</span>)</span>&#123; <span class="comment">/*[...]*/</span> &#125;;</div><div class="line"><span class="keyword">var</span> html = <span class="built_in">require</span>(<span class="string">'./index.art'</span>);</div></pre></td></tr></table></figure>
+<p>Use filter:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line">&#123;&#123;time | dateFormat 'yyyy-MM-dd hh:mm:ss'&#125;&#125;</div></pre></td></tr></table></figure>
+<h2 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h2><p>Support <code>SourceMap</code>:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">webpack --debug</div></pre></td></tr></table></figure>
+<p><img src="https://cloud.githubusercontent.com/assets/1791748/25306107/55b2afba-27b9-11e7-903b-4700ac47a4d3.png" alt="debug"></p>
+<h2 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h2><p>You can pass <a href="../docs/options.html">art-template options</a>.<br>Using standard webpack <a href="https://webpack.js.org/configuration/module/#useentry" target="_blank" rel="external">loader options</a>.</p>
+<h2 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h2><p>Home: <a href="https://github.com/aui/art-template-loader" target="_blank" rel="external">https://github.com/aui/art-template-loader</a></p>
+
+    
+    <div class="footer">
+      发现错误？想参与编辑？
+      <a href="https://github.com/aui/art-template-docs/blob/master/src/webpack/index.md" target="_blank">
+        在 Github 上编辑此页！
+      </a>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/art-template//js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/art-template//js/common.js"></script>
+
+        <!-- ga -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', '', '/art-template/');
+          ga('send', 'pageview');
+        </script>
+
+        <!-- search
+        <link href="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/art-template/css/search.css">
+        <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+        <script>
+        [
+          '#search-query-nav',
+          '#search-query-sidebar'
+        ].forEach(function (selector) {
+          if (!document.querySelector(selector)) return
+          // search index defaults to v2
+          var match = window.location.pathname.match(/^\/(v\d+)/)
+          var version = match ? match[1] : 'docs'
+          docsearch({
+            appId: 'BH4D9OD16A',
+            apiKey: '5638280abff9d207417bb03be05f0b25',
+            indexName: 'vuejs_cn2',
+            inputSelector: selector,
+            algoliaOptions: { facetFilters: ["version:" + version] }
+          })
+        })
+        </script> -->
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

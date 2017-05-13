@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>语法 - art-template</title>
+        <meta charset="utf-8">
+        <meta name="description" content="art-template">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="语法 - art-template">
+        <meta property="og:description" content="art-template">
+        <!--<meta property="og:image" content="/art-template//images/logo.png">-->
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="语法 - art-template">
+        <meta name="twitter:description" content="art-template">
+        <!--<meta name="twitter:image" content="/art-template//images/logo.png">-->
+
+        <!--<link rel="icon" href="/art-template//images/logo.png" type="image/x-icon">-->
+
+        <!-- <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono' rel='stylesheet' type='text/css'> -->
+
+        <!-- main page styles -->
+        <link rel="stylesheet" href="/art-template/css/page.css">
+
+        <script>window.PAGE_TYPE = "docs"</script>
+    </head>
+    <body class="docs">        <div id="mobile-bar" >
+            <a class="menu-button"></a>
+            <a class="logo" href="/">art-template</a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/art-template/">
+    <!--<img src="/images/logo.png">-->
+    <span>art-template</span>
+  </a>
+  <ul id="nav">
+    <!--<li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+</li>-->
+<li><a href="/art-template/docs/" class="nav-link current">Document</a></li>
+<li><a href="/art-template/webpack/" class="nav-link">Webpack</a></li>
+<li><a href="/art-template/express/" class="nav-link">Express</a></li>
+<li><a href="/art-template/koa/" class="nav-link">Koa</a></li>
+<!--<li class="nav-dropdown-container language">
+  <a class="nav-link">多语言</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="http://aui.github.io/art-template/" class="nav-link" target="_blank">中文</a></li>
+    <li><a href="http://aui.github.io/art-template/#等待你的翻译" class="nav-link" target="_blank">English</a></li>
+  </ul>
+</li>
+-->
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <ul class="main-menu">
+        <!--<li>
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+</li>-->
+<li><a href="/art-template/docs/" class="nav-link current">Document</a></li>
+<li><a href="/art-template/webpack/" class="nav-link">Webpack</a></li>
+<li><a href="/art-template/express/" class="nav-link">Express</a></li>
+<li><a href="/art-template/koa/" class="nav-link">Koa</a></li>
+<!--<li class="nav-dropdown-container language">
+  <a class="nav-link">多语言</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="http://aui.github.io/art-template/" class="nav-link" target="_blank">中文</a></li>
+    <li><a href="http://aui.github.io/art-template/#等待你的翻译" class="nav-link" target="_blank">English</a></li>
+  </ul>
+</li>
+-->
+
+    </ul>
+    <div class="list">
+        <h2>
+            
+            文档
+        </h2>
+        <ul class="menu-root">
+
+            
+                <li>
+                    <a href="/art-template/docs/installation.html" class="sidebar-link">安装</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/index.html" class="sidebar-link">介绍</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/syntax.html" class="sidebar-link current">语法</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/debug.html" class="sidebar-link">调试</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/imports.html" class="sidebar-link">模板变量</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/rules.html" class="sidebar-link">解析规则</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/minimize.html" class="sidebar-link">压缩页面</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/options.html" class="sidebar-link">选项</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/api.html" class="sidebar-link">API</a>
+                </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+<div class="content docs with-sidebar syntax-docs">
+    
+      <h1>语法</h1>
+    
+    <h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><p><strong>标准语法</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line">&#123;&#123;value&#125;&#125;</div><div class="line">&#123;&#123;data.key&#125;&#125;</div><div class="line">&#123;&#123;data['key']&#125;&#125;</div><div class="line">&#123;&#123;a ? b : c&#125;&#125;</div><div class="line">&#123;&#123;a || b&#125;&#125;</div><div class="line">&#123;&#123;a + b&#125;&#125;</div></pre></td></tr></table></figure>
+<p><strong>原始语法</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">%=</span> <span class="attr">value</span> %&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%=</span> <span class="attr">data.key</span> %&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%=</span> <span class="attr">data</span>['<span class="attr">key</span>'] %&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%=</span> <span class="attr">a</span> ? <span class="attr">b</span> <span class="attr">:</span> <span class="attr">c</span> %&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%=</span> <span class="attr">a</span> || <span class="attr">b</span> %&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%=</span> <span class="attr">a</span> + <span class="attr">b</span> %&gt;</span></div></pre></td></tr></table></figure>
+<p>模板一级特殊变量可以使用 <code>$data</code> 加下标的方式访问：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line">&#123;&#123;$data['user list']&#125;&#125;</div></pre></td></tr></table></figure>
+<h2 id="原文输出"><a href="#原文输出" class="headerlink" title="原文输出"></a>原文输出</h2><p><strong>标准语法</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line">&#123;&#123;@value&#125;&#125;</div></pre></td></tr></table></figure>
+<p><strong>原始语法</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">value</span> %&gt;</span></div></pre></td></tr></table></figure>
+<p>原始输出语句不会对 <code>HTML</code> 内容进行转义处理，可能存在安全风险，请谨慎使用。</p>
+<h2 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h2><p><strong>标准语法</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line">&#123;&#123;if value&#125;&#125; ... &#123;&#123;/if&#125;&#125;</div><div class="line">&#123;&#123;if v1&#125;&#125; ... &#123;&#123;else if v2&#125;&#125; ... &#123;&#123;/if&#125;&#125;</div></pre></td></tr></table></figure>
+<p><strong>原始语法</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">value</span>) &#123; %&gt;</span> ... <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">v1</span>) &#123; %&gt;</span> ... <span class="tag">&lt;<span class="name">%</span> &#125; <span class="attr">else</span> <span class="attr">if</span> (<span class="attr">v2</span>) &#123; %&gt;</span> ... <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h2><p><strong>标准语法</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line">&#123;&#123;each target&#125;&#125;</div><div class="line">    &#123;&#123;$index&#125;&#125; &#123;&#123;$value&#125;&#125;</div><div class="line">&#123;&#123;/each&#125;&#125;</div></pre></td></tr></table></figure>
+<p><strong>原始语法</strong></p>
+<figure class="highlight"><table><tr><td class="code"><pre><div class="line">&lt;% for(var i = 0; i &lt; target.length; i++)&#123; %&gt;</div><div class="line">    &lt;%= i %&gt; &lt;%= target[i] %&gt;</div><div class="line">&lt;% &#125; %&gt;</div></pre></td></tr></table></figure>
+<ol>
+<li><code>target</code> 支持 <code>Array</code> 与 <code>Object</code> 的迭代，其默认值为 <code>$data</code></li>
+<li><code>$value</code> 与 <code>$index</code> 可以自定义：<code>{{each target val key}}</code></li>
+</ol>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p><strong>标准语法</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line">&#123;&#123;set temp = data.sub.content&#125;&#125;</div></pre></td></tr></table></figure>
+<p><strong>原始语法</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">var</span> <span class="attr">temp</span> = <span class="string">data.sub.content;</span> %&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="模板继承"><a href="#模板继承" class="headerlink" title="模板继承"></a>模板继承</h2><p><strong>标准语法</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line">&#123;&#123;extend './layout.art'&#125;&#125;</div><div class="line">&#123;&#123;block 'head'&#125;&#125; ... &#123;&#123;/block&#125;&#125;</div></pre></td></tr></table></figure>
+<p><strong>原始语法</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">extend</span>('<span class="attr">.</span>/<span class="attr">layout.art</span>') %&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">block</span>('<span class="attr">head</span>', <span class="attr">function</span>()&#123; %&gt;</span> ... <span class="tag">&lt;<span class="name">%</span> &#125;) %&gt;</span></div></pre></td></tr></table></figure>
+<p>模板继承允许你构建一个包含你站点共同元素的基本模板“骨架”。范例：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!--layout.art--&gt;</span></div><div class="line"><span class="meta">&lt;!doctype html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>&#123;&#123;block 'title'&#125;&#125;My Site&#123;&#123;/block&#125;&#125;<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"></div><div class="line">    &#123;&#123;block 'head'&#125;&#125;</div><div class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"main.css"</span>&gt;</span></div><div class="line">    &#123;&#123;/block&#125;&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    &#123;&#123;block 'content'&#125;&#125;&#123;&#123;/block&#125;&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!--index.art--&gt;</span></div><div class="line">&#123;&#123;extend './layout.art'&#125;&#125;</div><div class="line"></div><div class="line">&#123;&#123;block 'title'&#125;&#125;&#123;&#123;title&#125;&#125;&#123;&#123;/block&#125;&#125;</div><div class="line"></div><div class="line">&#123;&#123;block 'head'&#125;&#125;</div><div class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"custom.css"</span>&gt;</span></div><div class="line">&#123;&#123;/block&#125;&#125;</div><div class="line"></div><div class="line">&#123;&#123;block 'content'&#125;&#125;</div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>This is just an awesome page.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">&#123;&#123;/block&#125;&#125;</div></pre></td></tr></table></figure>
+<p>渲染 index.art 后，将自动应用布局骨架。</p>
+<h2 id="子模板"><a href="#子模板" class="headerlink" title="子模板"></a>子模板</h2><p><strong>标准语法</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line">&#123;&#123;include './header.art'&#125;&#125;</div><div class="line">&#123;&#123;include './header.art' data&#125;&#125;</div></pre></td></tr></table></figure>
+<p><strong>原始语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&lt;% include(&apos;./header.art&apos;) %&gt;</div><div class="line">&lt;% include(&apos;./header.art&apos;, data) %&gt;</div></pre></td></tr></table></figure>
+<p><code>include</code> 第二个参数默认值为 <code>$data</code>。</p>
+<blockquote>
+<p>注意，art-template 内建 HTML 压缩器，请避免书写 HTML 非正常闭合的子模板，否则开启压缩后标签可能会被意外“优化。</p>
+</blockquote>
+<h2 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h2><p><strong>注册过滤器</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">template.defaults.imports.dateFormat = <span class="function"><span class="keyword">function</span>(<span class="params">date, format</span>)</span>&#123;<span class="comment">/*[code..]*/</span>&#125;;</div><div class="line">template.defaults.imports.timestamp = <span class="function"><span class="keyword">function</span>(<span class="params">value</span>)</span>&#123;<span class="keyword">return</span> value * <span class="number">1000</span>&#125;;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>过滤器函数第一个参数接受目标值。</p>
+</blockquote>
+<p><strong>标准语法</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line">&#123;&#123;date | timestamp | dateFormat 'yyyy-MM-dd hh:mm:ss'&#125;&#125;</div></pre></td></tr></table></figure>
+<p><code>{{value | filter}}</code> 过滤器语法类似管道操作符，它的上一个输出作为下一个输入。</p>
+<p><strong>原始语法</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">%=</span> $<span class="attr">imports.dateFormat</span>($<span class="attr">imports.timestamp</span>(<span class="attr">date</span>), '<span class="attr">yyyy-MM-dd</span> <span class="attr">hh:mm:ss</span>') %&gt;</span></div></pre></td></tr></table></figure>
+
+    
+      <div class="docs-links">
+        
+          <span>← <a href="/art-template/docs/index.html">介绍</a></span>
+        
+        
+          <span style="float:right"><a href="/art-template/docs/debug.html">调试</a> →</span>
+        
+      </div>
+    
+    <div class="footer">
+      发现错误？想参与编辑？
+      <a href="https://github.com/aui/art-template-docs/blob/master/src/docs/syntax.md" target="_blank">
+        在 Github 上编辑此页！
+      </a>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/art-template//js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/art-template//js/common.js"></script>
+
+        <!-- ga -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', '', '/art-template/');
+          ga('send', 'pageview');
+        </script>
+
+        <!-- search
+        <link href="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/art-template/css/search.css">
+        <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+        <script>
+        [
+          '#search-query-nav',
+          '#search-query-sidebar'
+        ].forEach(function (selector) {
+          if (!document.querySelector(selector)) return
+          // search index defaults to v2
+          var match = window.location.pathname.match(/^\/(v\d+)/)
+          var version = match ? match[1] : 'docs'
+          docsearch({
+            appId: 'BH4D9OD16A',
+            apiKey: '5638280abff9d207417bb03be05f0b25',
+            indexName: 'vuejs_cn2',
+            inputSelector: selector,
+            algoliaOptions: { facetFilters: ["version:" + version] }
+          })
+        })
+        </script> -->
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

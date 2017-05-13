@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>解析规则 - art-template</title>
+        <meta charset="utf-8">
+        <meta name="description" content="art-template">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="解析规则 - art-template">
+        <meta property="og:description" content="art-template">
+        <!--<meta property="og:image" content="/art-template//images/logo.png">-->
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="解析规则 - art-template">
+        <meta name="twitter:description" content="art-template">
+        <!--<meta name="twitter:image" content="/art-template//images/logo.png">-->
+
+        <!--<link rel="icon" href="/art-template//images/logo.png" type="image/x-icon">-->
+
+        <!-- <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono' rel='stylesheet' type='text/css'> -->
+
+        <!-- main page styles -->
+        <link rel="stylesheet" href="/art-template/css/page.css">
+
+        <script>window.PAGE_TYPE = "docs"</script>
+    </head>
+    <body class="docs">        <div id="mobile-bar" >
+            <a class="menu-button"></a>
+            <a class="logo" href="/">art-template</a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/art-template/">
+    <!--<img src="/images/logo.png">-->
+    <span>art-template</span>
+  </a>
+  <ul id="nav">
+    <!--<li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+</li>-->
+<li><a href="/art-template/docs/" class="nav-link current">Document</a></li>
+<li><a href="/art-template/webpack/" class="nav-link">Webpack</a></li>
+<li><a href="/art-template/express/" class="nav-link">Express</a></li>
+<li><a href="/art-template/koa/" class="nav-link">Koa</a></li>
+<!--<li class="nav-dropdown-container language">
+  <a class="nav-link">多语言</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="http://aui.github.io/art-template/" class="nav-link" target="_blank">中文</a></li>
+    <li><a href="http://aui.github.io/art-template/#等待你的翻译" class="nav-link" target="_blank">English</a></li>
+  </ul>
+</li>
+-->
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <ul class="main-menu">
+        <!--<li>
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+</li>-->
+<li><a href="/art-template/docs/" class="nav-link current">Document</a></li>
+<li><a href="/art-template/webpack/" class="nav-link">Webpack</a></li>
+<li><a href="/art-template/express/" class="nav-link">Express</a></li>
+<li><a href="/art-template/koa/" class="nav-link">Koa</a></li>
+<!--<li class="nav-dropdown-container language">
+  <a class="nav-link">多语言</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="http://aui.github.io/art-template/" class="nav-link" target="_blank">中文</a></li>
+    <li><a href="http://aui.github.io/art-template/#等待你的翻译" class="nav-link" target="_blank">English</a></li>
+  </ul>
+</li>
+-->
+
+    </ul>
+    <div class="list">
+        <h2>
+            
+            文档
+        </h2>
+        <ul class="menu-root">
+
+            
+                <li>
+                    <a href="/art-template/docs/installation.html" class="sidebar-link">安装</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/index.html" class="sidebar-link">介绍</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/syntax.html" class="sidebar-link">语法</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/debug.html" class="sidebar-link">调试</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/imports.html" class="sidebar-link">模板变量</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/rules.html" class="sidebar-link current">解析规则</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/minimize.html" class="sidebar-link">压缩页面</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/options.html" class="sidebar-link">选项</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/api.html" class="sidebar-link">API</a>
+                </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+<div class="content docs with-sidebar rules-docs">
+    
+      <h1>解析规则</h1>
+    
+    <p><code>template.defaults.rules</code></p>
+<p>art-template 可以自定义模板解析规则，默认配置了原始语法与标准语法。</p>
+<h2 id="修改界定符"><a href="#修改界定符" class="headerlink" title="修改界定符"></a>修改界定符</h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 原始语法的界定符规则</span></div><div class="line">template.defaults.rules[<span class="number">0</span>].test = <span class="regexp">/&lt;%(#?)((?:==|=#|[=-])?)([\w\W]*?)(-?)%&gt;/</span>;</div><div class="line"><span class="comment">// 标准语法的界定符规则</span></div><div class="line">template.defaults.rules[<span class="number">1</span>].test = <span class="regexp">/&#123;&#123;[ \t]*([@#]?)(\/?)([\w\W]*?)[ \t]*&#125;&#125;/</span>;</div></pre></td></tr></table></figure>
+<p>它们是一个正则表达式，你可以只修改界定符部分。例如修改 <code>&lt;%</code> <code>%&gt;</code> 为 <code>&lt;?</code> <code>?&gt;</code>：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> rule = template.defaults.rules[<span class="number">0</span>];</div><div class="line">rule.test = <span class="keyword">new</span> <span class="built_in">RegExp</span>(rules.test.source.replace(<span class="string">'&lt;%'</span>, <span class="string">'&lt;?'</span>).replace(<span class="string">'%&gt;'</span>, <span class="string">'?&gt;'</span>));</div></pre></td></tr></table></figure>
+<h2 id="添加语法"><a href="#添加语法" class="headerlink" title="添加语法"></a>添加语法</h2><p>从一个简单的例子说起，让模板引擎支持 ES6 <code>${name}</code> 模板字符串的解析：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">template.defaults.rules.push(&#123;</div><div class="line">    <span class="attr">test</span>: <span class="regexp">/\$&#123;([\w\W]*?)&#125;/</span>,</div><div class="line">    <span class="attr">use</span>: <span class="function"><span class="keyword">function</span>(<span class="params">match, code</span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            <span class="attr">code</span>: code,</div><div class="line">            <span class="attr">output</span>: <span class="string">'escape'</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>其中 <code>test</code> 是匹配字符串正则，<code>use</code> 是匹配后的调用函数。关于 <code>use</code> 函数：</p>
+<ul>
+<li>参数：一个参数为匹配到的字符串，其余的参数依次接收 <code>test</code> 正则的分组匹配内容</li>
+<li>返回值：必须返回一个对象，包含 <code>code</code> 与 <code>output</code> 两个字段：<ul>
+<li><code>code</code> 转换后的 JavaScript 语句</li>
+<li><code>output</code> 描述 <code>code</code> 的类型，可选值：<ul>
+<li><code>&#39;escape&#39;</code> 编码后进行输出</li>
+<li><code>&#39;raw&#39;</code> 输出原始内容</li>
+<li><code>false</code> 不输出任何内容</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>值得一提的是，语法规则对渲染速度没有影响，模板引擎编译器会帮你优化渲染性能。</p>
+
+    
+      <div class="docs-links">
+        
+          <span>← <a href="/art-template/docs/imports.html">模板变量</a></span>
+        
+        
+          <span style="float:right"><a href="/art-template/docs/minimize.html">压缩页面</a> →</span>
+        
+      </div>
+    
+    <div class="footer">
+      发现错误？想参与编辑？
+      <a href="https://github.com/aui/art-template-docs/blob/master/src/docs/rules.md" target="_blank">
+        在 Github 上编辑此页！
+      </a>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/art-template//js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/art-template//js/common.js"></script>
+
+        <!-- ga -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', '', '/art-template/');
+          ga('send', 'pageview');
+        </script>
+
+        <!-- search
+        <link href="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/art-template/css/search.css">
+        <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+        <script>
+        [
+          '#search-query-nav',
+          '#search-query-sidebar'
+        ].forEach(function (selector) {
+          if (!document.querySelector(selector)) return
+          // search index defaults to v2
+          var match = window.location.pathname.match(/^\/(v\d+)/)
+          var version = match ? match[1] : 'docs'
+          docsearch({
+            appId: 'BH4D9OD16A',
+            apiKey: '5638280abff9d207417bb03be05f0b25',
+            indexName: 'vuejs_cn2',
+            inputSelector: selector,
+            algoliaOptions: { facetFilters: ["version:" + version] }
+          })
+        })
+        </script> -->
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>art-template</title>
+        <meta charset="utf-8">
+        <meta name="description" content="art-template">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="art-template">
+        <meta property="og:description" content="art-template">
+        <!--<meta property="og:image" content="/art-template//images/logo.png">-->
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="art-template">
+        <meta name="twitter:description" content="art-template">
+        <!--<meta name="twitter:image" content="/art-template//images/logo.png">-->
+
+        <!--<link rel="icon" href="/art-template//images/logo.png" type="image/x-icon">-->
+
+        <!-- <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono' rel='stylesheet' type='text/css'> -->
+
+        <!-- main page styles -->
+        <link rel="stylesheet" href="/art-template/css/index.css">
+
+        <script>window.PAGE_TYPE = ""</script>
+    </head>
+    <body class="">        <div id="mobile-bar" class="top">
+            <a class="menu-button"></a>
+            <a class="logo" href="/">art-template</a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/art-template/">
+    <!--<img src="/images/logo.png">-->
+    <span>art-template</span>
+  </a>
+  <ul id="nav">
+    <!--<li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+</li>-->
+<li><a href="/art-template/docs/" class="nav-link">Document</a></li>
+<li><a href="/art-template/webpack/" class="nav-link">Webpack</a></li>
+<li><a href="/art-template/express/" class="nav-link">Express</a></li>
+<li><a href="/art-template/koa/" class="nav-link">Koa</a></li>
+<!--<li class="nav-dropdown-container language">
+  <a class="nav-link">多语言</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="http://aui.github.io/art-template/" class="nav-link" target="_blank">中文</a></li>
+    <li><a href="http://aui.github.io/art-template/#等待你的翻译" class="nav-link" target="_blank">English</a></li>
+  </ul>
+</li>
+-->
+
+  </ul>
+</div>
+
+        
+            <div class="sidebar">
+  <ul class="main-menu">
+    <!--<li>
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+</li>-->
+<li><a href="/art-template/docs/" class="nav-link">Document</a></li>
+<li><a href="/art-template/webpack/" class="nav-link">Webpack</a></li>
+<li><a href="/art-template/express/" class="nav-link">Express</a></li>
+<li><a href="/art-template/koa/" class="nav-link">Koa</a></li>
+<!--<li class="nav-dropdown-container language">
+  <a class="nav-link">多语言</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="http://aui.github.io/art-template/" class="nav-link" target="_blank">中文</a></li>
+    <li><a href="http://aui.github.io/art-template/#等待你的翻译" class="nav-link" target="_blank">English</a></li>
+  </ul>
+</li>
+-->
+
+  </ul>
+</div>
+
+<div id="about">
+  <div class="inner">
+    <h1>
+      极快的<br>JavaScript 模板引擎
+    </h1>
+    <p>
+      <a class="button start" href="docs/">文档</a>
+      <a class="button github" href="https://github.com/aui/art-template" target="_blank">源码</a>
+    </p>
+  </div>
+</div>
+
+<div id="features">
+
+  <section class="feature">
+    <h2>快速</h2>
+    <p>基于作用域预声明的技术，带来近乎极限的运行速度。<a href="rendering-test/">在线测试››</a></p>
+    <p><img width="884" height="181" srcset="/art-template/images/chart@2x.png 2x" src="/art-template/images/chart.png"
+        alt="chart"></p>
+  </section>
+
+  <section class="feature">
+    <h2>调试</h2>
+    <p>无论语法还是运行时错误，都能定位到模板所在行。</p>
+    <p>在 NodeJS 中调试：</p>
+    <p><img width="884" height="609" srcset="/art-template/images/node-debug@2x.png 2x" src="/art-template/images/node-debug.png"
+        alt="debug"></p>
+    <p>在浏览器中调试：</p>
+    <p><img width="884" height="591" srcset="/art-template/images/web-debug@2x.png 2x" src="/art-template/images/web-debug.png"
+        alt="debug"></p>
+  </section>
+
+  <section class="feature">
+    <h2>语法</h2>
+    <p>使用简单的模板语法，同时支持原始 JavaScript 语句、兼容 <a href="http://ejs.co">EJS</a> 模板。</p>
+    <p><img width="912" height="541" srcset="/art-template/images/syntax@2x.png 2x" src="/art-template/images/syntax.png" alt="syntax"></p>
+  </section>
+
+  <section class="feature">
+    <h2>轻量</h2>
+    <p>浏览器版本仅 6KB 大小（Gzip）。</p>
+  </section>
+
+</div>
+
+<div id="footer">
+  Copyright &copy; 2014-2017 aui
+</div>
+
+<script>
+  var topScrolled = false
+  window.addEventListener('scroll', function () {
+    var pageHeight = window.outerHeight;
+    if (window.pageYOffset > pageHeight && !topScrolled) {
+      topScrolled = true
+      document.getElementById('mobile-bar').classList.remove('top')
+    } else if (window.pageYOffset <= pageHeight && topScrolled) {
+      topScrolled = false
+      document.getElementById('mobile-bar').classList.add('top')
+    }
+  })
+</script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/art-template//js/common.js"></script>
+
+        <!-- ga -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', '', '/art-template/');
+          ga('send', 'pageview');
+        </script>
+
+        <!-- search
+        <link href="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/art-template/css/search.css">
+        <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+        <script>
+        [
+          '#search-query-nav',
+          '#search-query-sidebar'
+        ].forEach(function (selector) {
+          if (!document.querySelector(selector)) return
+          // search index defaults to v2
+          var match = window.location.pathname.match(/^\/(v\d+)/)
+          var version = match ? match[1] : 'docs'
+          docsearch({
+            appId: 'BH4D9OD16A',
+            apiKey: '5638280abff9d207417bb03be05f0b25',
+            indexName: 'vuejs_cn2',
+            inputSelector: selector,
+            algoliaOptions: { facetFilters: ["version:" + version] }
+          })
+        })
+        </script> -->
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>介绍 - art-template</title>
+        <meta charset="utf-8">
+        <meta name="description" content="art-template">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="介绍 - art-template">
+        <meta property="og:description" content="art-template">
+        <!--<meta property="og:image" content="/art-template//images/logo.png">-->
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="介绍 - art-template">
+        <meta name="twitter:description" content="art-template">
+        <!--<meta name="twitter:image" content="/art-template//images/logo.png">-->
+
+        <!--<link rel="icon" href="/art-template//images/logo.png" type="image/x-icon">-->
+
+        <!-- <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono' rel='stylesheet' type='text/css'> -->
+
+        <!-- main page styles -->
+        <link rel="stylesheet" href="/art-template/css/page.css">
+
+        <script>window.PAGE_TYPE = "docs"</script>
+    </head>
+    <body class="docs">        <div id="mobile-bar" >
+            <a class="menu-button"></a>
+            <a class="logo" href="/">art-template</a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/art-template/">
+    <!--<img src="/images/logo.png">-->
+    <span>art-template</span>
+  </a>
+  <ul id="nav">
+    <!--<li>
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+</li>-->
+<li><a href="/art-template/docs/" class="nav-link current">Document</a></li>
+<li><a href="/art-template/webpack/" class="nav-link">Webpack</a></li>
+<li><a href="/art-template/express/" class="nav-link">Express</a></li>
+<li><a href="/art-template/koa/" class="nav-link">Koa</a></li>
+<!--<li class="nav-dropdown-container language">
+  <a class="nav-link">多语言</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="http://aui.github.io/art-template/" class="nav-link" target="_blank">中文</a></li>
+    <li><a href="http://aui.github.io/art-template/#等待你的翻译" class="nav-link" target="_blank">English</a></li>
+  </ul>
+</li>
+-->
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <ul class="main-menu">
+        <!--<li>
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+</li>-->
+<li><a href="/art-template/docs/" class="nav-link current">Document</a></li>
+<li><a href="/art-template/webpack/" class="nav-link">Webpack</a></li>
+<li><a href="/art-template/express/" class="nav-link">Express</a></li>
+<li><a href="/art-template/koa/" class="nav-link">Koa</a></li>
+<!--<li class="nav-dropdown-container language">
+  <a class="nav-link">多语言</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="http://aui.github.io/art-template/" class="nav-link" target="_blank">中文</a></li>
+    <li><a href="http://aui.github.io/art-template/#等待你的翻译" class="nav-link" target="_blank">English</a></li>
+  </ul>
+</li>
+-->
+
+    </ul>
+    <div class="list">
+        <h2>
+            
+            文档
+        </h2>
+        <ul class="menu-root">
+
+            
+                <li>
+                    <a href="/art-template/docs/installation.html" class="sidebar-link">安装</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/index.html" class="sidebar-link current">介绍</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/syntax.html" class="sidebar-link">语法</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/debug.html" class="sidebar-link">调试</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/imports.html" class="sidebar-link">模板变量</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/rules.html" class="sidebar-link">解析规则</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/minimize.html" class="sidebar-link">压缩页面</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/options.html" class="sidebar-link">选项</a>
+                </li>
+            
+                <li>
+                    <a href="/art-template/docs/api.html" class="sidebar-link">API</a>
+                </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+<div class="content docs with-sidebar index-docs">
+    
+      <h1>介绍</h1>
+    
+    <p>art-template 是一个简约、超快的模板引擎。</p>
+<p>它采用作用域预声明的技术来优化模板渲染速度，从而获得接近 JavaScript 极限的运行性能，并且同时支持 NodeJS 和浏览器。<a href="../rendering-test/">在线速度测试</a>。</p>
+<h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><ol>
+<li>拥有接近 JavaScript 渲染极限的的性能</li>
+<li>调试友好：语法、运行时错误日志精确到模板所在行；支持在模板文件上打断点（Webpack Loader）</li>
+<li>支持 Express、Koa、Webpack</li>
+<li>支持模板继承与子模板</li>
+<li>浏览器版本仅 6KB 大小</li>
+</ol>
+<p><a href="https://github.com/aui/art-template/issues/369" target="_blank" rel="external">art-template@4.0 新特性一览</a></p>
+<h2 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h2><p>art-template 同时支持两种模板语法。标准语法可以让模板更容易读写；原始语法具有强大的逻辑处理能力。</p>
+<p><strong>标准语法</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line">&#123;&#123;if user&#125;&#125;</div><div class="line">  <span class="tag">&lt;<span class="name">h2</span>&gt;</span>&#123;&#123;user.name&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">&#123;&#123;/if&#125;&#125;</div></pre></td></tr></table></figure>
+<p><strong>原始语法</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">user</span>) &#123; %&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h2</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">user.name</span> %&gt;</span><span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></div></pre></td></tr></table></figure>
+<p>原始语法兼容 <a href="http://ejs.co" target="_blank" rel="external">EJS</a>、<a href="http://underscorejs.org/#template" target="_blank" rel="external">Underscore</a>、<a href="https://lodash.com/docs/#template" target="_blank" rel="external">LoDash</a> 模板。</p>
+<h2 id="渲染模板"><a href="#渲染模板" class="headerlink" title="渲染模板"></a>渲染模板</h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> template = <span class="built_in">require</span>(<span class="string">'art-template'</span>);</div><div class="line"><span class="keyword">var</span> html = template(__dirname + <span class="string">'/tpl-user.art'</span>, &#123;</div><div class="line">    <span class="attr">user</span>: &#123;</div><div class="line">        <span class="attr">name</span>: <span class="string">'aui'</span></div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h2 id="核心方法"><a href="#核心方法" class="headerlink" title="核心方法"></a>核心方法</h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 基于模板名渲染模板</span></div><div class="line">template(filename, data);</div><div class="line"></div><div class="line"><span class="comment">// 将模板源代码编译成函数</span></div><div class="line">template.compile(source, options);</div><div class="line"></div><div class="line"><span class="comment">// 将模板源代码编译成函数并立刻执行</span></div><div class="line">template.render(source, data, options);</div></pre></td></tr></table></figure>
+    
+      <div class="docs-links">
+        
+          <span>← <a href="/art-template/docs/installation.html">安装</a></span>
+        
+        
+          <span style="float:right"><a href="/art-template/docs/syntax.html">语法</a> →</span>
+        
+      </div>
+    
+    <div class="footer">
+      发现错误？想参与编辑？
+      <a href="https://github.com/aui/art-template-docs/blob/master/src/docs/index.md" target="_blank">
+        在 Github 上编辑此页！
+      </a>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/art-template//js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/art-template//js/common.js"></script>
+
+        <!-- ga -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', '', '/art-template/');
+          ga('send', 'pageview');
+        </script>
+
+        <!-- search
+        <link href="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/art-template/css/search.css">
+        <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+        <script>
+        [
+          '#search-query-nav',
+          '#search-query-sidebar'
+        ].forEach(function (selector) {
+          if (!document.querySelector(selector)) return
+          // search index defaults to v2
+          var match = window.location.pathname.match(/^\/(v\d+)/)
+          var version = match ? match[1] : 'docs'
+          docsearch({
+            appId: 'BH4D9OD16A',
+            apiKey: '5638280abff9d207417bb03be05f0b25',
+            indexName: 'vuejs_cn2',
+            inputSelector: selector,
+            algoliaOptions: { facetFilters: ["version:" + version] }
+          })
+        })
+        </script> -->
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>
